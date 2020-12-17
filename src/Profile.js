@@ -6,7 +6,7 @@ export class Profile extends React.Component{
 
     render(){
         return(
-           <div>
+           <div className="Profile">
             <h1>This is my profile</h1>
            </div> 
         );

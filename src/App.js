@@ -6,7 +6,8 @@ import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles';
 import MenuItem from '@material-ui/core/MenuItem';
 import { browserHistory } from "react-router-dom";
-import {Profile} from "./Profile";
+import history from './history';
+import {Link} from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,6 +36,10 @@ const people_types = [
   }
 ];
 class App extends Component {
+  
+  login() {
+    
+  }
   render() {
     return (
       <div className="App">
@@ -50,7 +55,7 @@ class App extends Component {
           autoComplete="current-password"
           variant="outlined"
         />
-        <Button variant="contained" color="primary" disableElevation>
+        <Button variant="contained" color="primary" disableElevation component={Link} to="/Profile" >
           Login
         </Button>
         <br></br>
